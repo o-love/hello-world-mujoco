@@ -18,10 +18,10 @@ int main(void) {
 
   // run simulation for 10 seconds
   while (d->time < 10) {
-    //printf("Time %d\n", d->time);
-    printf("Time %.6f\n", d->time);
     mj_step(m, d);
   }
+
+  printf("Finished simulation\n");
 
   // free model and data
   mj_deleteData(d);

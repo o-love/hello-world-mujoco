@@ -11,8 +11,6 @@ pub fn build(b: *std.Build) void {
         .link_libc = true,
     });
 
-    exe_mod.addIncludePath(b.path("include"));
-
     exe_mod.addCSourceFiles(.{
         .files = &.{
             "src/main.c",
