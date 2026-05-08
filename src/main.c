@@ -7,6 +7,8 @@ mjData* d;
 
 int main(void) {
   // load model from file and check for errors
+  printf("Starting up!\n");
+
   m = mj_loadXML("hello.xml", NULL, error, 1000);
   if (!m) {
     printf("%s\n", error);

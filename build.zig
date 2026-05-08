@@ -22,6 +22,8 @@ pub fn build(b: *std.Build) void {
         },
     });
 
+    exe_mod.addLibraryPath(.{ .cwd_relative = "/usr/local/lib" });
+    exe_mod.addIncludePath(.{ .cwd_relative = "/usr/local/include" });
     exe_mod.linkSystemLibrary("mujoco", .{});
 
     const exe = b.addExecutable(.{
